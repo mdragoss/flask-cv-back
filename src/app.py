@@ -3,6 +3,7 @@ import os
 from flask import Flask
 from pymongo import MongoClient
 
+from commands import commands_blueprint
 from db import get_client, init_mongo_command
 from views.experience_and_studies import Education, Experience
 from views.personal import Personal
@@ -22,6 +23,7 @@ with app.app_context():
     if isinstance(client, MongoClient):
         is_mongo = True
 
+app.register_blueprint(commands_blueprint)
 app.cli.add_command(init_mongo_command)
 
 
