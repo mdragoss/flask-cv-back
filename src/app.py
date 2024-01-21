@@ -1,12 +1,12 @@
 import os
 
 from flask import Flask
+from pymongo import MongoClient
 
 from db import get_client, init_mongo_command
+from views.experience_and_studies import Education, Experience
 from views.personal import Personal
 from views.skills_and_hobby import SkillAndHobby
-from views.experience_and_studies import Education, Experience
-from pymongo import MongoClient
 
 app = Flask(__name__)
 app.config['DEBUG'] = os.getenv('DEBUG', False)
@@ -62,9 +62,7 @@ app.add_url_rule(
 
 app.add_url_rule(
     '/education',
-    view_func=Education.as_view(
-        'education', client=client, is_mongo=is_mongo
-    ),
+    view_func=Education.as_view('education', client=client, is_mongo=is_mongo),
 )
 
 
