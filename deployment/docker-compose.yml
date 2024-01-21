@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  cv-mongo:
+    image: mongodb/mongodb-community-server:latest
+    ports:
+      - "27017:27017"
+    container_name: mongodb
+    env_file:
+      - ../.env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: pass
+
+  cv-flask-app:
+    build:
+      context: ../
+    container_name:  flaskapp
+    # command: python3 src/app.py
+    command: flask --app src/app run --host='0.0.0.0' --port=8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - ../.env
+    depends_on:
+      - cv-mongo
+    environment:
+      FLASK_RUN_PORT: 8000
+      DEBUG: False
+      MONGO_URL: cv-mongo
