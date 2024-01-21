@@ -59,12 +59,12 @@ cd deployment && sh start-local.sh
 ```
 
 To run cli is possible in the following way
-a. To listing a all commands can run
+- To listing a all commands can run
 ```sh
 flask --app src/app commands
 ```
 
-b. To run one single command is possible in the following way
+- To run one single command is possible in the following way
 ```sh
 flask --app src/app commands experience
 ```
