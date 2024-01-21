@@ -1,0 +1,26 @@
+[
+    {
+        "company": "Amdaris",
+        "position": "Software Developer",
+        "website": "https://amdaris.com/",
+        "start_date": "2021-08-02",
+        "end_date": "None",
+        "achievements": []
+    },
+    {
+        "company": "Starnet",
+        "position": "Software Developer",
+        "website": "https://starnet.md/",
+        "start_date": "2018-05-14",
+        "end_date": "2021-02-06",
+        "achievements": []
+    },
+    {
+        "company": "East Star Consulting",
+        "position": "SAP ABAP Developer",
+        "website": "https://east-start.md/",
+        "start_date": "2017-01-01",
+        "end_date": "2018-05-01",
+        "achievements": []
+    }
+]

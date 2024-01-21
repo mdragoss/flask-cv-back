@@ -1,0 +1,12 @@
+[
+    {
+        "study_name": "Management of informational applications",
+        "university": "Technical University of Moldova",
+        "courses": ["Application Management", "Software Development", "Database Management"]
+    },
+    {
+        "study_name": "Applied Informatics",
+        "university": "Academy of Economics of Moldova",
+        "courses": ["C++", "C#", "Economy", "Database"]
+    }
+]

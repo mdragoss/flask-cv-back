@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pymongo = "*"
+connexion = {extras = ["swagger-ui"], version = "*"}
+
+[dev-packages]
+black = "*"
+isort = "*"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+start = 'python3 src/app.py'
+shell = 'flask --app src/app shell'
+mongo_init = 'flask --app src/app init-mongo-db'
