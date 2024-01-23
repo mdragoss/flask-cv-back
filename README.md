@@ -1,4 +1,4 @@
-# Please write a Python Flask application that presents your CV data:
+# Please write a Python Flask application that presents your CV data (limited in time 6 - 8hours):
 1. As a JSON REST API with endpoints GET /personal, GET /experience, GET /education, ...
 2. As a Flask CLI command that prints the data to the console
 
